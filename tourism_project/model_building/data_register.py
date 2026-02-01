@@ -20,10 +20,10 @@ except RepositoryNotFoundError:
 
 # Build relative workspace path
 workspace = Path(os.getenv("GITHUB_WORKSPACE", "."))
-data_dir = workspace / "tourism_project" / "data"
+#data_dir = workspace / "tourism_project" / "data"
 
 api.upload_folder(
-    folder_path= os.path.join(tourism_project, 'data'),
+    folder_path= os.path.join(workspace, 'tourism_project', 'data'),
     repo_id=repo_id,
     repo_type=repo_type,
 )
